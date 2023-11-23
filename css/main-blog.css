@@ -7,6 +7,7 @@
 @import url(./broadcrumb.css);
 @import url(./sidebarCoursesBox.css);
 @import url(./pagination.css);
+@import url(./comment.css);
 @import url(./footer.css);
 
 /* starter .... */
@@ -283,7 +284,7 @@
 
 .article-socialMedia__title {
     color: #cecccc;
-    font-size: 1.5rem  ;
+    font-size: 1.5rem;
 }
 
 .article-socialMedia__icons {
@@ -298,3 +299,72 @@
     color: #ccc;
     font-size: 2rem;
 }
+
+/* start article suggestion  styles */
+.suggestion-articles {
+    display: flex;
+    align-items: center;
+    background-color: #909aa7;
+    padding: 3.5rem 2.5rem;
+    margin: 4rem 0;
+    border-radius: 0.5rem;
+
+}
+
+.suggestion-articles__right {
+
+    position: relative;
+
+}
+
+.suggestion-articles__right::after {
+    content: "قدیمی تر ";
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+    transform: rotate(180deg);
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.suggestion-articles__left::after {
+    content: "جدید تر ";
+    position: absolute;
+    top: -3rem;
+    right: 2rem;
+    /* transform: rotate(); */
+    font-size: 1.5rem;
+
+}
+
+.suggestion-articles__content {
+    display: flex;
+    align-items: center;
+}
+
+
+.suggestion-articles__icon {
+    padding: 1rem;
+    color: #333333;
+    font-size: 2.5rem;
+}
+
+.suggestion-articles__link {
+    text-align: center;
+    line-height: 3rem;
+    color: #333333;
+    font-weight: bolder;
+    margin: 0 2rem;
+}
+
+.suggestion-articles__left {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+
+}
+
+
+/* finish   article suggestion  styles */
+
