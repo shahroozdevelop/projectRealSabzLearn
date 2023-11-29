@@ -11,9 +11,9 @@ window.addEventListener("load", () => {
     let landingText = "ما به هر قیمتی  دوره تولید نمیکنیم  ..."
     let textIndex = 0
     textWriter(landingText, textIndex)
-    makeCounter(40  ,  landingCoursesCount)
-    makeCounter(3_120  ,  landingUserCounter)
-    makeCounter( 7_000  ,  landingminutesCount)
+    makeCounter(40, landingCoursesCount)
+    makeCounter(3_120, landingUserCounter)
+    makeCounter(7_000, landingminutesCount)
 })
 
 const textWriter = (text, index) => {
@@ -36,12 +36,17 @@ const textWriter = (text, index) => {
 function  makeCounter (max  ,  element) {
     let counter = 0
     const inteval  = setInterval(() => {
-        
+
         if(counter  === max){
             clearInterval(inteval)
         }
         element.innerHTML  =  counter
         counter++
     }, 0.5);
-    
+
 }
+
+
+// ////////////////////////////////////////////dore js   
+
+
