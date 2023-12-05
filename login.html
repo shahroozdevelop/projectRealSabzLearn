@@ -184,17 +184,17 @@
 
             <form action="" class="login-form">
                 <div class="login-form__username">
-                    <input type="text" name="" class="login-form__username-input" id=""
+                    <input type="text" name="" class="login-form__username-input" id="login_username"
                         placeholder=" نام کاربری یا آدرس ایمیل  ...">
                     <i class="fas fa-user  login-form__username-icon"></i>
                 </div>
                 <div class="login-form__password">
-                    <input type="password" name="" class="login-form__password-input" id=""
+                    <input type="password" name="" class="login-form__password-input" id="login_password"
                         placeholder="رمز عبور  کاربر ...">
                     <i class=" fas fa-lock-open  login-form__password-icon"></i>
                 </div>
 
-                <button class="login-form__btn">
+                <button class="login-form__btn"  id="login-btn">
                     <span class="login-form__btn-text">ورود </span>
                     <i class="fas fa-sign-in   login-form__btn-iocn"></i>
                 </button>
@@ -300,6 +300,10 @@
 
     <script src="./vendor/Font-awesome/all.min.js"></script>
     <script src="./vendor/Bootsrap5/bootsrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script  src="./js/login.js"  type="module"> </script>
+    <script  src="./js/shared.js"  type="module"> </script>
 </body>
 
 </html>

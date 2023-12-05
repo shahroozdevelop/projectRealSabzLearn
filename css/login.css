@@ -226,3 +226,23 @@
 
     font-size: 1.2rem;
 }
+
+
+
+/* style   custom sweet alert   */
+.swal2-show {
+width: 400px;
+height: 300px ;
+}
+
+.swal2-title{
+    font-size: 5rem;
+}
+
+.swal2-html-container{
+    font-size: 1.7rem  !important  ;
+}
+
+.swal2-confirm {
+    font-size: 1.5rem   !important;
+}
