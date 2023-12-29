@@ -8,6 +8,7 @@ window.addEventListener("load"  , () =>  {
   btnNewsLetterElement.addEventListener("click"  , (e) =>  {
   
     e.preventDefault()
+    
   
     createNewNewsLettter()
 })
