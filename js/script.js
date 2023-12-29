@@ -1,3 +1,4 @@
+import { getAndShowAllCourses   ,  getAndShowArticles,  getAndShowNavBarMenus,  getAndShowPapularCourses   ,  getAndShowPresellCourses  , globalSearch} from "./funcs/shared.js"
 
 // config text writer ... 
 const $ = document
@@ -6,6 +7,9 @@ const landingTitle = $.querySelector(".landing__title")
 const landingCoursesCount = $.querySelector('#courses-count')
 const landingUserCounter = $.querySelector('#user-counter')
 const landingminutesCount = $.querySelector('#minutes-count')
+const globalSearchBtn  =  $.querySelector("#search-btn")
+const globalSearchInp  =  $.querySelector("#search-input")
+
 
 window.addEventListener("load", () => {
     let landingText = "ما به هر قیمتی  دوره تولید نمیکنیم  ..."
@@ -14,6 +18,16 @@ window.addEventListener("load", () => {
     makeCounter(40, landingCoursesCount)
     makeCounter(3_120, landingUserCounter)
     makeCounter(7_000, landingminutesCount)
+    getAndShowAllCourses()
+    getAndShowPapularCourses()
+    getAndShowPresellCourses()
+    getAndShowNavBarMenus()
+
+    getAndShowArticles()
+    globalSearchBtn.addEventListener("click"  ,  (e) =>  {
+        e.preventDefault()
+        location.href  =  `search.html?value=${globalSearchInp.value.trim()}`
+    })
 })
 
 const textWriter = (text, index) => {

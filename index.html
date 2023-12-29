@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="vendor/Font-awesome/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./vendor/SwiperSlider/swiper.css">
+
 </head>
 
 <body>
@@ -64,11 +65,11 @@
                 <div class="main-header__content">
                     <div class="main-header__right">
                         <img src="./images/logo/download.webp" alt="logo-sabzlearn" class="main-header__logo">
-                        <ul class="main-header__menu">
+                        <ul class="main-header__menu"  id="menus-warpper">
                             <li class="main-header__item">
                                 <a href="" class="main-header__link">صفحه اصلی</a>
                             </li>
-                            <li class="main-header__item">
+                            <!-- <li class="main-header__item">
                                 <a href="" class="main-header__link"> فرانت اند
                                     <i class="fas fa-angle-down   main-header__icon"></i>
                                     <ul class="main-header__dropdown">
@@ -147,7 +148,7 @@
                             </li>
                             <li class="main-header__item">
                                 <a href="" class="main-header__link">مهارت های نرم </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="main-header__left">
@@ -158,7 +159,7 @@
                             <i class="fas fa-shopping-cart    main-header__card-icon"></i>
                         </a>
                         <a href="#" class="main-header__profile">
-                            <span class="main-header_profile-text">shahrooz karami</span>
+                            <!-- elem fro m  js  -->
                         </a>
                     </div>
                 </div>
@@ -176,9 +177,9 @@
             </h1>
             <h2 class="landing__subtitle">با آکادمی شهروز خیالت راحته !</h2>
             <div class="landing__searchbar">
-                <input type="text" class="landing__searchbar-input" placeholder="دوست داری چه چیزی رو یاد بگیری ...">
-                <button class="landing__searchbar-btn">
-                    <i class="fas fa-search   landing__searchbar-icon"></i>
+                <input type="text" class="landing__searchbar-input" placeholder="دوست داری چه چیزی رو یاد بگیری ..."  id="search-input">
+                <button class="landing__searchbar-btn"   type="submit"  id="search-btn">
+                    <i class="fas fa-search   landing__searchbar-icon  "  ></i>
                 </button>
             </div>
             <div class="landing__status">
@@ -233,48 +234,9 @@
             <div class="courses-content">
 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img1.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
+                    <div class="row"  id="courses-container">
+                       
+                        <!-- <div class="col-lg-4">
                             <div class="course-box">
                                 <a href="#">
                                     <img src="/images/courses/img2.png" alt="course-1" class="course-box__img">
@@ -313,8 +275,8 @@
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
+                        </div> -->
+                        <!-- <div class="col-lg-4">
                             <div class="course-box">
                                 <a href="#">
                                     <img src="/images/courses/img3.png" alt="course-1" class="course-box__img">
@@ -353,8 +315,8 @@
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
+                        </div> -->
+                        <!-- <div class="col-lg-4">
                             <div class="course-box">
                                 <a href="#">
                                     <img src="/images/courses/img4.jpg" alt="course-1" class="course-box__img">
@@ -393,8 +355,8 @@
 
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
+                        </div> -->
+                        <!-- <div class="col-lg-4">
                             <div class="course-box">
                                 <a href="#">
                                     <img src="/images/courses/img5.png" alt="course-1" class="course-box__img">
@@ -473,7 +435,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -556,170 +518,12 @@
             <div class="popular__header">
                 <span class="  popular__header-title  title"> محبوب ترین دوره ها </span>
             </div>
-            <div class="popular__slider">
+            <div class="popular__slider"  >
 
-                <div class="swiper  swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img5.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img4.jpg" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img3.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img1.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                <div class="swiper  swiper-container  ">
+                    <div class="swiper-wrapper"  id="container-popular">
+              <!-- Data loaded from  js  ...  -->
+               
 
                     </div>
 
@@ -739,167 +543,9 @@
             <div class="presell__slider">
 
                 <div class="swiper  swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img2.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img3.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img5.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="course-box">
-                                <a href="#">
-                                    <img src="/images/courses/img1.png" alt="course-1" class="course-box__img">
-                                </a>
-                                <div class="course-box__main">
-                                    <a href="#" class="course-box__title">دوره مصور سازی با پایتون </a>
-                                    <div class="course-box__raiting-teacher">
-                                        <div class="course-box__teacher">
-                                            <i class="fas fa-chalkboard-teacher  course-box__teacher-icon"></i>
-                                            <a href="#" class="course-box__teacher-link">رضا دولتی</a>
-                                        </div>
-                                        <div class="course-box__reating">
-                                            <i class="fas  fa-star-half-alt   course-box__reating-icon  "></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-                                            <i class="fas  fa-star"></i>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="course-box__status">
-                                        <div class="course-box__users">
-                                            <i class="fas fa-users   course-box__users-link"></i>
-                                            <span href="#" class="course-box__user-text">1055</span>
-                                        </div>
-                                        <span class="course-box__users-price">1,000,000</span>
-
-                                    </div>
-                                    <div class="course-box__footer">
-                                        <a href="" class="course-box__fotter-link">مشاهده اطلاعات
-                                            <i class="fas fa-arrow-left   course-box__fotter-icon"></i>
-                                        </a>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper"   id="presell-container">
+                     
+       
 
                     </div>
 
@@ -930,8 +576,8 @@
             </div>
 
             <div class="articles-card">
-                <div class="row">
-                    <div class="col-lg-4">
+                <div class="row"   id="container-art">
+                    <!-- <div class="col-lg-4">
 
                         <div class="articles-card__warppear">
                             <div class="articles-card__header">
@@ -947,8 +593,8 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col-lg-4">
+                    </div> -->
+                    <!-- <div class="col-lg-4">
 
                         <div class="articles-card__warppear">
                             <div class="articles-card__header">
@@ -981,7 +627,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1032,7 +678,12 @@
                                     <a href="" class="footer-widgets__link">آموزش بوت استرپ</a>
                                     <a href="" class="footer-widgets__link">آموزش پایتون</a>
                                 </div>
-
+                                <div class="footer-widgets__newsLetter">
+                                    <input type="email"  id="inpNewsletter"   class="footer-widgets__newsLetter-inp"    placeholder="ایمیل خود را وارد کنید ...">
+                                    <button  class="footer-widgets__newsLetter-btn" id="btnNewsLetter">عضویت</button>
+    
+    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1048,10 +699,12 @@
 
 
         <script src="./vendor/Font-awesome/all.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="./js/swiper.js"></script>
-        <script  src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script  src="./vendor/SwiperSlider/swiper.js"></script>
+        <script src="./js/swiper.js"   ></script>
+        <script  src="/js/shared.js"    type="module"></script>
+        <script  src="./js/script.js"  type="module"></script>
+        
 
 </body>
-
 </html>

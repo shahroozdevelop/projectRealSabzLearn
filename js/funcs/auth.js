@@ -1,4 +1,4 @@
-import { showSwal, saveToLocalStorage     ,  getToken  } from "./utils.js"
+import { saveInToLocalStorage, showSwal     ,  getToken } from "./utils.js"
 
 
 let $ = document
@@ -20,7 +20,6 @@ function regester() {
         confirmPassword: passwordInp.value.trim()
 
     }
-
     fetch("http://localhost:4000/v1/auth/register", {
         method: "POST",
         headers: {
@@ -28,23 +27,29 @@ function regester() {
         },
         body: JSON.stringify(newUserInfos)
     }).then(res => {
+        console.log(res);
         if (res.status === 201) {
 
             showSwal('ورود موفقیت آمیز بود ', "success", "welcome", () => {
                 location.href = "/index.html"
             })
 
-        } else if (res.status === 409) {
+        }
+        else if (res.status === 409) {
             showSwal("خطانام کاربری یا ایمیل تکراری میباشد ", "error", "go to login page ", () => {
                 location.href = "/login.html"
             })
         }
+        else if (res.status === 400) {
+            showSwal("پر کردن فیلد ها اجباری میباشد ", "warning", "Edit Form ", () => {
+            })
+        }
         return res.json()
+    }).then((result) => {
+        console.log(result);
+        saveInToLocalStorage("user", { Token: result.accessToken })
     })
-        .then(result => {
-            console.log(result);
-            saveToLocalStorage("user", { token: result.accessToken })
-        })
+
 
 
 }
@@ -65,44 +70,41 @@ function login() {
         },
         body: JSON.stringify(loginUserObj)
     }).then(res => {
-if (res.status === 401) {
+        console.log(res);
+        if (res.status === 401 || res.status === 400) {
 
-    showSwal("کاربری با این اطلاعات یافت نشد"  ,"error"  ,  "Edit information" ,  () =>  {}  )
-    
-}else {
-    showSwal("کاربری با این اطلاعات یافت نشد"  ,"success"  ,  "welcome to panel" ,  () =>  {
-        location.href  =  "/index.html"
-    }  )
+            showSwal("کاربری با این اطلاعات یافت نشد", "error", "Edit information", () => { })
 
-}
+        } else {
+            showSwal("ورود موفقیت آمیز بود ", "success", "welcome to panel", () => {
+                location.href = "/index.html"
+            })
 
+        }
         return res.json()
 
-
     }).then((result) => {
-        saveToLocalStorage("user"  ,  { token :   result.accessToken})
+        console.log(result);
+        saveInToLocalStorage("user", { Token: result.accessToken })
     })
 }
 
 
- async  function  getMe () {
+ async function  getMe () {
 
-    const  Token  = getToken()
-    if(!Token){
-        return  false 
-    }else {
-      const  res =  await  fetch ("http://localhost:4000/v1/auth/me"  ,  {
-            headers :  {
-                "Authorization"  :  `Bearer ${Token}`
-            }
-        })
-        const  data  =  await res.json()
-        return  data 
-    }
+const    token  =  getToken()
+if (!token) {
+    return  false
+}else{
+     const  res  =  await   fetch("http://localhost:4000/v1/auth/me"  , {
+        headers :  {
+            "Authorization"  :   `Bearer ${token}`
+        }
+    })
+    const data  = await  res.json()
+    return  data
+}
 }
 
 
-export { regester, login   , getMe   }
-
-
-
+export { regester, login    ,  getMe }

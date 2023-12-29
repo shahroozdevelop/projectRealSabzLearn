@@ -80,3 +80,31 @@
     background-color: #718092;
     padding: 3rem 0;
 }
+
+.footer-widgets__newsLetter{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem ;
+}
+
+.footer-widgets__newsLetter-inp{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 0.5rem  ;
+    border-bottom-right-radius: 0.5rem  ;
+        padding: 1rem;
+    font-size: 1.5rem ;
+    color: black;
+}
+.footer-widgets__newsLetter-btn {
+    border: 0;
+    background-color: #718092;
+    color: white;
+    border-top-left-radius: 0.5rem  ;
+    border-bottom-left-radius: 0.5rem  ;
+    padding: 1rem  ;
+    font-size: 1.5rem;
+
+
+}

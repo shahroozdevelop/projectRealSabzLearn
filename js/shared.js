@@ -1,7 +1,14 @@
-import { getMe } from "./funcs/auth.js";
+import { showUsreNameInNavbar    ,  renderTopBarMenus  ,  createNewNewsLettter } from "./funcs/shared.js";
+const  btnNewsLetterElement  =  document.querySelector("#btnNewsLetter")
 
-window.addEventListener("load"  ,  () =>  {
-    getMe().then((data) =>{
-        console.log(data);
-    })
+
+window.addEventListener("load"  , () =>  {
+  showUsreNameInNavbar()
+  renderTopBarMenus()
+  btnNewsLetterElement.addEventListener("click"  , (e) =>  {
+  
+    e.preventDefault()
+  
+    createNewNewsLettter()
+})
 })
